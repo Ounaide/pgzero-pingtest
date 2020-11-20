@@ -7,10 +7,7 @@ from pgzero.runner import prepare_mod, run_mod
 mod = sys.modules['__main__']
 if not getattr(sys, '_pgzrun', None):
     if not getattr(mod, '__file__', None):
-        #raise ImportError(
-         #   "You are running from an interactive interpreter.\n"
-          #  "'import pgzrun' only works when you are running a Python file."
-        #)
+        
         prepare_mod(mod)
 
 
